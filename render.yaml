@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: efine-mock-data-loader
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: PORT
+        value: 5001
